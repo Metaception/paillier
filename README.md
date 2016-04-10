@@ -55,7 +55,7 @@ Usage
 -----
 
 paillier_on_ethereum.py contains example primes that can be used in the blog post about [Additive homomorphic encryption on Ethereum](https://blog.kobigurk.com/additive-homomorphic-encryption-on-ethereum).
-    
+**Caution: the primes there are really small. This is just an example, and it's not secure.**     
     To encrypt a number: 
         python paillier_on_ethereum.py encrypt 10
         
