@@ -54,6 +54,15 @@ To run unit tests please install [Nose][2]:
 Usage
 -----
 
+    paillier_on_ethereum.py contains example primes that can be used in the blog post about [additive homomorphic encryption on ethereum](https://blog.kobigurk.com/additive-homomorphic-encryption-on-ethereum).
+    
+    To encrypt a number: 
+        python paillier_on_ethereum.py encrypt 10
+        
+    To decrypt a number:
+        python paillier_on_ethereum.py decrypt 0x62fcecbee9b7539c1048681eebb7868ced0e00e902ce000879a3078704ea6aa6
+        
+    General usage:
     $ ipython
     Python 2.7.1 (r271:86832, Jun 16 2011, 16:59:05)
     Type "copyright", "credits" or "license" for more information.
@@ -84,6 +93,7 @@ License and Copyright
 LGPL v3, see [LICENSE][3]
 
 (C) 2011 Mike Ivanov
+(C) 2016 Kobi Gurkan
 
 
 [1]: http://code.google.com/p/thep/
