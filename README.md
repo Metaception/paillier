@@ -54,7 +54,7 @@ To run unit tests please install [Nose][2]:
 Usage
 -----
 
-    paillier_on_ethereum.py contains example primes that can be used in the blog post about [additive homomorphic encryption on ethereum](https://blog.kobigurk.com/additive-homomorphic-encryption-on-ethereum).
+paillier_on_ethereum.py contains example primes that can be used in the blog post about [Additive homomorphic encryption on Ethereum](https://blog.kobigurk.com/additive-homomorphic-encryption-on-ethereum).
     
     To encrypt a number: 
         python paillier_on_ethereum.py encrypt 10
