@@ -41,6 +41,15 @@ class PrivateKey(object):
     def __repr__(self):
         return '<PrivateKey: %s %s>' % (self.l, self.m)
 
+class SpecialPrivateKey(object):
+    def __init__(self, l, m):
+        self.l = l
+        self.m = m
+
+    def __repr__(self):
+        return '<PrivateKey: %s %s>' % (self.l, self.m)
+
+
 class PublicKey(object):
 
     @classmethod
