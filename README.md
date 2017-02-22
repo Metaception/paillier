@@ -87,7 +87,7 @@ paillier_on_ethereum.py contains example primes that can be used in the blog pos
     Out[7]: 71624230283745591274688669...
 
     In [8]: decrypt(priv, pub, z)
-    Out[8]: 5L
+    Out[8]: 5
 
 
 License and Copyright
@@ -101,4 +101,3 @@ LGPL v3, see [LICENSE][3]
 [1]: http://code.google.com/p/thep/
 [2]: http://readthedocs.org/docs/nose/en/latest/index.html
 [3]: https://github.com/mikeivanov/paillier/blob/master/LICENSE
-
