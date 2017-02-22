@@ -3,6 +3,7 @@ Pure Python Paillier Homomorphic Cryptosystem
 
 This is a very basic pure Python implementation of the Paillier
 Homomorphic Cryptosystem.
+This fork was modified to work for Python 3.
 
 Homomorphic Cryptosystems
 -------------------------
