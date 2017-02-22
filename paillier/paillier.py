@@ -1,5 +1,5 @@
 import math
-import primes
+import paillier.primes as primes
 
 def invmod(a, p, maxiter=1000000):
     """The multiplicitive inverse of a in the integers modulo p:
@@ -10,7 +10,7 @@ def invmod(a, p, maxiter=1000000):
         raise ValueError('0 has no inverse mod %d' % p)
     r = a
     d = 1
-    for i in xrange(min(p, maxiter)):
+    for i in range(min(p, maxiter)):
         d = ((p // r + 1) * d) % p
         r = (d * a) % p
         if r == 1:
@@ -65,14 +65,14 @@ class PublicKey(object):
         return '<PublicKey: %s>' % self.n
 
 def generate_keypair(bits):
-    p = primes.generate_prime(bits / 2)
-    q = primes.generate_prime(bits / 2)
+    p = primes.generate_prime(bits // 2)
+    q = primes.generate_prime(bits // 2)
     n = p * q
     return PrivateKey(p, q, n), PublicKey(n)
 
 def encrypt(pub, plain):
     while True:
-        r = primes.generate_prime(long(round(math.log(pub.n, 2))))
+        r = primes.generate_prime(int(round(math.log(pub.n, 2))))
         if r > 0 and r < pub.n:
             break
     x = pow(r, pub.n, pub.n_sq)
@@ -95,4 +95,3 @@ def decrypt(priv, pub, cipher):
     x = pow(cipher, priv.l, pub.n_sq) - 1
     plain = ((x // pub.n) * priv.m) % pub.n
     return plain
-
