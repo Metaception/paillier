@@ -22,9 +22,8 @@ def check_is_probably_prime(x, is_prime):
     assert primes.is_probably_prime(x) == is_prime
 
 def test_generate_prime():
-    for i in xrange(3, 10):
+    for i in range(3, 10):
         yield check_generate_prime, pow(2, i)
 
 def check_generate_prime(bits):
     assert primes.is_probably_prime(primes.generate_prime(bits))
-
