@@ -2,29 +2,28 @@
 
 from paillier.paillier import *
 
-print "Generating keypair..."
+print("Generating keypair...")
 priv, pub = generate_keypair(512)
 
 x = 3
-print "x =", x
-print "Encrypting x..."
+print("x =", x)
+print("Encrypting x...")
 cx = encrypt(pub, x)
-print "cx =", cx
+print("cx =", cx)
 
 y = 5
-print "y =", y
-print "Encrypting y..."
+print("y =", y)
+print("Encrypting y...")
 cy = encrypt(pub, y)
-print "cy =", cy
+print("cy =", cy)
 
-print "Computing cx + cy..."
+print("Computing cx + cy...")
 cz = e_add(pub, cx, cy)
-print "cz =", cz
+print("cz =", cz)
 
-print "Decrypting cz..."
+print("Decrypting cz...")
 z = decrypt(priv, pub, cz)
-print "z =", z
+print("z =", z)
 
-print "Computing decrypt((cz + 2) * 3) ..."
-print "result =", decrypt(priv, pub,
-                          e_mul_const(pub, e_add_const(pub, cz, 2), 3))
+print("Computing decrypt((cz + 2) * 3) ...")
+print("result =", decrypt(priv, pub, e_mul_const(pub, e_add_const(pub, cz, 2), 3)))
